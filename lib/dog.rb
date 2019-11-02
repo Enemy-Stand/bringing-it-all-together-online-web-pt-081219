@@ -27,6 +27,7 @@ class Dog
     id = row[0]
     name = row[1]
     breed = row[2]
+<<<<<<< HEAD
     new_dog = self.new(id: id, name: name, breed: breed)
     new_dog
   end
@@ -84,4 +85,10 @@ class Dog
       self.new_from_db(row)
     end.first
   end
+=======
+    result = DB[:conn].execute(sql, row)[0]
+    new_dog = self.new(id: id, name: name, breed: breed)
+    new_dog
+  end
+>>>>>>> b83acec3e29655a263416c19a3a923c8bac7e962
 end
